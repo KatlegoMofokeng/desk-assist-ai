@@ -1,229 +1,178 @@
 # WorkMate AI
 
-Project Title: WorkMate AI – AI-Powered Workplace Productivity Assistant
+> AI-powered workplace productivity assistant. Work smarter, save time, and stay organised.
 
-Role:
-Act as an expert full-stack developer, UX designer, and AI productivity specialist.
+WorkMate AI is a modern web application that helps professionals reduce time spent on repetitive workplace tasks. It combines three AI-powered tools into one clean, responsive experience:
 
-Objective:
-Build a professional AI-powered workplace productivity assistant called WorkMate AI. The purpose of the application is to help professionals reduce time spent on repetitive workplace tasks by using AI to generate professional emails, summarize meeting notes, and organize tasks into structured plans.
+- **Smart Email Generator** — craft professional emails tailored to your audience and tone.
+- **Meeting Notes Summarizer** — turn lengthy or unstructured meeting notes into clear summaries, decisions, action items, and follow-ups.
+- **AI Task Planner** — organise your tasks into prioritised daily or weekly plans with recommended completion order and time allocation.
 
-The application should be designed for office workers, administrators, graduates, team members, managers, and other professionals who regularly work with emails, meetings, and task planning.
-Core Feature 1: Smart Email Generator
+---
 
-Create an Email Generator page where users can provide:
+## Table of Contents
 
- Recipient or audience
+- [Features](#features)
+  - [Smart Email Generator](#smart-email-generator)
+  - [Meeting Notes Summarizer](#meeting-notes-summarizer)
+  - [AI Task Planner](#ai-task-planner)
+- [Responsible AI](#responsible-ai)
+- [Tech Stack](#tech-stack)
+- [Getting Started](#getting-started)
+- [Project Structure](#project-structure)
+- [Available Scripts](#available-scripts)
+- [AI Integration Notes](#ai-integration-notes)
+- [License](#license)
 
- Purpose of the email
+---
 
- Context or important details
+## Features
 
- Preferred tone: Formal, Informal, Friendly, Professional, or Persuasive
+### Smart Email Generator
 
- Optional subject or topic
+Create professional email drafts in seconds.
 
-Include a Generate Email button.
+- Specify the recipient or audience.
+- Define the purpose of the email.
+- Add relevant context and details.
+- Choose a tone: **Formal**, **Informal**, **Friendly**, **Professional**, or **Persuasive**.
+- Optionally override the subject or topic.
+- Generate a structured email with subject, greeting, body, and closing.
+- Edit, copy, clear, or regenerate the result.
 
-The generated result should contain:
+### Meeting Notes Summarizer
 
- A suitable email subject line
+Transform raw meeting notes into an organised summary.
 
- Professional greeting
+- Paste lengthy or unstructured notes.
+- Extract:
+  - Meeting summary
+  - Key discussion points
+  - Decisions made
+  - Action items (with owner and deadline where mentioned)
+  - Important follow-ups
+- Missing owners or deadlines are clearly marked as **"Not specified"**.
+- Edit, copy, clear, or regenerate the summary.
 
- Clear and well-structured email body
+### AI Task Planner
 
- Appropriate closing
+Plan your day or week with AI assistance.
 
-The generated email must adapt its language and tone according to the selected audience and tone.
+- Add multiple tasks with description, deadline, estimated duration, importance, and notes.
+- Choose between a **Daily Plan** or **Weekly Plan**.
+- Get tasks organised by:
+  - Urgency
+  - Importance
+  - Deadline
+  - Estimated effort
+- Output includes:
+  - High, medium, and low priority groups
+  - Recommended completion order
+  - Suggested time allocation
+  - Productivity recommendations
+- Tasks are never deleted — the AI only recommends how to prioritise them.
 
-Allow users to edit and copy the generated result.
-Core Feature 2: Meeting Notes Summarizer
+---
 
-Create a Meeting Notes Summarizer page where users can paste lengthy or unstructured meeting notes.
+## Responsible AI
 
-Include a Summarize Meeting button.
+WorkMate AI is designed to assist, not replace, human judgment.
 
-The AI-generated result should organize the information into the following sections:
+> **AI-generated content may contain errors. Users should review and verify generated information before using it professionally.**
 
- Meeting Summary
+- The app does not invent facts outside the information you provide.
+- Missing details (such as deadlines or owners) are reported as "Not specified" rather than guessed.
+- Generated outputs are editable, copyable, and should always be reviewed before sending or sharing.
+- The assistant does not collect unnecessary sensitive personal information.
 
- Key Discussion Points
+---
 
- Decisions Made
+## Tech Stack
 
- Action Items
+- **[TanStack Start](https://tanstack.com/start)** — full-stack React framework with SSR/SSG and server functions.
+- **[React 19](https://react.dev)** — UI library.
+- **[TypeScript](https://www.typescriptlang.org)** — type-safe development.
+- **[Tailwind CSS v4](https://tailwindcss.com)** — utility-first styling with custom design tokens.
+- **[Vite 7](https://vitejs.dev)** — fast build tooling.
 
- Person Responsible
+---
 
- Deadlines
+## Getting Started
 
- Important Follow-ups
+### Prerequisites
 
-Do not invent information that is not contained in the user's notes. If a deadline or responsible person is not mentioned, clearly state “Not specified.”
+- [Node.js](https://nodejs.org) (LTS recommended)
+- [Bun](https://bun.sh) or npm
 
-Allow users to edit and copy the generated summary.
-Core Feature 3: AI Task Planner
-
-Create an AI Task Planner page where users can enter multiple workplace tasks.
-
-Users should also be able to provide:
-
- Task description
-
- Deadline
-
- Estimated duration
-
- Importance
-
- Any additional notes
-
-Include a choice between creating a:
-
- Daily Plan
-
- Weekly Plan
-
-Include a Create Plan button.
-
-The AI should analyze the tasks and organize them according to:
-
- Urgency
-
- Importance
-
- Deadline
-
- Estimated effort
-
-The output should include:
-
- High Priority Tasks
-
- Medium Priority Tasks
-
- Low Priority Tasks
-
- Recommended order of completion
-
- Suggested time allocation
-
- Productivity recommendations
-
-The AI should not automatically delete or ignore tasks. It should only provide recommendations and allow the user to make the final decision.
-Homepage
-
-Create a clean professional homepage introducing WorkMate AI with the tagline:
-
-“Work Smarter. Save Time. Stay Organised.”
-
-Include a short description explaining that WorkMate AI helps users improve workplace productivity using artificial intelligence.
-
-Display three prominent cards:
-
- Smart Email Generator
-
- Meeting Notes Summarizer
-
- AI Task Planner
-
-Each card should contain:
-
- An icon
-
- Short description
-
- Button to open the tool
-Navigation
-
-Include a professional navigation bar containing:
-
- Home
-
- Email Generator
-
- Meeting Summarizer
-
- Task Planner
-
- About
-
-Make navigation simple and easy to understand.
-User Experience
-
-The application should:
-
- Have a clean and modern professional appearance
-
- Be easy for first-time users to understand
-
- Work on desktop, tablet, and mobile
-
- Use clear buttons and form labels
-
- Show loading feedback while AI content is being generated
-
- Display helpful validation messages when required information is missing
-
- Provide Copy, Clear, and Regenerate options where appropriate
-
-Do not overcrowd the interface.
-Responsible AI
-
-Include a small Responsible AI notice explaining:
-
-“AI-generated content may contain errors. Users should review and verify generated information before using it professionally.”
-
-The application should:
-
- Avoid presenting AI-generated information as guaranteed fact
-
- Avoid inventing information when user input is incomplete
-
- Encourage users to review outputs
-
- Avoid collecting unnecessary sensitive personal information
-
- Clearly indicate that AI assists the user but does not replace human judgment
-About Page
-
-Create a short About page explaining:
-
-Problem:
-Professionals spend significant amounts of time writing emails, organizing tasks, and converting lengthy meeting notes into useful information.
-
-Solution:
-WorkMate AI combines three AI-powered productivity tools into one application to help professionals save time, organize information, and improve workplace efficiency.
-Initial Development Requirement
-
-For the first version, create the complete user interface, navigation, input forms, results sections, and user workflow.
-
-Structure the application so that AI functionality can be connected or improved during later development.
-
-Keep the code well structured, maintainable, and suitable for future integration with an AI API.
-
-Do not add unnecessary features outside the project's three core functions.
-
-This project was built with [Lovable](https://lovable.dev).
-
-**Live app**: https://desk-assist-ai.lovable.app
-
-## Build with Lovable
-
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/7164fa48-7de5-48b4-a1b0-2577ac9ba359).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
-
-## Development
-
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+### Installation
 
 ```sh
 git clone <this-repository-url>
 cd <repository-name>
-npm i
-npm run dev
+bun install
+# or: npm install
 ```
+
+### Run the development server
+
+```sh
+bun run dev
+# or: npm run dev
+```
+
+Open [http://localhost:8080](http://localhost:8080) to view the app.
+
+---
+
+## Project Structure
+
+```
+src/
+├── components/
+│   └── wm/
+│       └── chrome.tsx          # Shared UI components (Panel, ChromeButton, LoadingBar, etc.)
+├── lib/
+│   ├── utils.ts                # Utility helpers
+│   └── workmate-ai.ts          # AI generation layer and shared types
+├── routes/
+│   ├── __root.tsx              # Root layout with navigation and footer
+│   ├── about.tsx               # About page
+│   ├── email-generator.tsx     # Smart Email Generator
+│   ├── index.tsx               # Homepage
+│   ├── meeting-summarizer.tsx  # Meeting Notes Summarizer
+│   └── task-planner.tsx        # AI Task Planner
+├── styles.css                  # Global styles, design tokens, and utilities
+├── router.tsx                  # TanStack Router configuration
+└── start.ts                    # TanStack Start entry point
+```
+
+---
+
+## Available Scripts
+
+| Command         | Description                          |
+| --------------- | ------------------------------------ |
+| `bun run dev`   | Start the local development server     |
+| `bun run build` | Build the application for production |
+| `bun run start` | Start the production server            |
+
+---
+
+## AI Integration Notes
+
+The current implementation uses a local, deterministic AI layer (`src/lib/workmate-ai.ts`) so the entire user workflow can be built and tested end to end without external API keys.
+
+To connect a real AI provider later:
+
+1. Replace the bodies of `generateEmail`, `summarizeMeeting`, and `createPlan` in `src/lib/workmate-ai.ts` with calls to your preferred API or server function.
+2. Keep the exported TypeScript interfaces stable — the UI depends on them.
+3. Maintain the existing guardrails:
+   - Never invent facts not present in user input.
+   - Report missing owners or deadlines as `"Not specified"`.
+   - Never drop or delete tasks — only prioritise and recommend.
+
+---
+
+## License
+
+This project is built with [Lovable](https://lovable.dev). The code is yours — feel free to push it to your own repository, extend it, and ship it.
