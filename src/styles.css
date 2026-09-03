@@ -142,3 +142,95 @@
     color: var(--color-foreground);
   }
 }
+
+/* ==========================================================================
+   WorkMate AI design system — "metallic chrome" direction
+   Chrome blues + aqua gradients, bevelled surfaces, Chakra Petch display type.
+   ========================================================================== */
+
+@theme {
+  --color-paper: hsl(210 25% 93%);
+  --color-surface: hsl(210 30% 98%);
+  --color-ink: hsl(222 30% 14%);
+  --color-muted: hsl(222 15% 44%);
+  --color-line: hsl(216 25% 80%);
+  --color-chrome: hsl(206 58% 46%);
+  --color-chrome-2: hsl(190 62% 52%);
+  --color-chrome-3: hsl(214 50% 62%);
+  --color-chrome-ink: hsl(212 60% 20%);
+  --color-gold: hsl(42 88% 52%);
+  --font-display: "Chakra Petch", sans-serif;
+  --font-body: "IBM Plex Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+@keyframes wm-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes wm-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+@keyframes wm-sheen {
+  0% { transform: translateX(-160%); }
+  60%, 100% { transform: translateX(260%); }
+}
+
+/* Loading bar: sweeping highlight while AI content generates. */
+@utility wm-shimmer {
+  background: linear-gradient(90deg, transparent 0%, hsl(0 0% 100% / 0.7) 50%, transparent 100%);
+  background-size: 220% 100%;
+  animation: wm-shimmer 1.3s linear infinite;
+}
+
+/* Glossy sweep across primary chrome buttons. */
+@utility wm-sheen {
+  position: relative;
+  overflow: hidden;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40%;
+    background: linear-gradient(100deg, transparent, hsl(0 0% 100% / 0.55), transparent);
+    animation: wm-sheen 3.4s ease-in-out infinite;
+  }
+}
+
+/* Bevelled panel surface used for every card, form and result container. */
+@utility wm-panel {
+  border-radius: var(--radius-xl);
+  background: linear-gradient(to bottom, hsl(0 0% 100%), var(--color-surface));
+  box-shadow: 0 0 0 1px var(--color-line);
+}
+
+@utility wm-chrome-btn {
+  color: hsl(0 0% 100%);
+  background: linear-gradient(to bottom, var(--color-chrome-2), var(--color-chrome) 55%, var(--color-chrome-3));
+  box-shadow: 0 0 0 1px hsl(0 0% 100% / 0.5), 0 1px 2px hsl(212 60% 20% / 0.25);
+}
+
+@utility wm-field {
+  border-radius: var(--radius-md);
+  background: hsl(0 0% 100%);
+  box-shadow: 0 0 0 1px var(--color-line);
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--color-ink);
+  width: 100%;
+  &:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px hsl(206 58% 46% / 0.5);
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-body);
+  }
+}
