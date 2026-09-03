@@ -32,7 +32,7 @@ export const Route = createFileRoute("/meeting-summarizer")({
       },
     ],
   }),
-  component: MeetingSummarizerPage;
+  component: MeetingSummarizerPage,
 });
 
 function summaryToText(s: MeetingSummary): string {
